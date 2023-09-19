@@ -22,3 +22,8 @@ python3 manage.py createsuperuser
 
 ### Запуск приложения
 `sudo bash ctrl.sh start`  
+
+### Разработка js
+ `sudo docker exec -it my_site_my_site_server_1 bash`  
+ `cd common/static/common/js`  
+ `npm run dev`
