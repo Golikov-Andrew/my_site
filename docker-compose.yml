@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  my_site_db:
+    container_name: my_site_postgres_db
+    image: postgres:14
+    restart: always
+    environment:
+      POSTGRES_DB: "${MY_SITE_DATABASE_DTBS}"
+      POSTGRES_USER: "${MY_SITE_DATABASE_USER}"
+      POSTGRES_PASSWORD: "${MY_SITE_DATABASE_PSWD}"
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    ports:
+     - "5432:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    networks:
+      - my_site
+    
+  my_site_server:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    environment:
+      POSTGRES_DB: "${MY_SITE_DATABASE_DTBS}"
+      POSTGRES_USER: "${MY_SITE_DATABASE_USER}"
+      POSTGRES_PASSWORD: "${MY_SITE_DATABASE_PSWD}"
+    depends_on:
+      - my_site_db
+    ports:
+      - "8000:8000"
+    command: python3 /usr/src/my_site/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/usr/src/app_tdm
+    networks:
+      - my_site
+
+networks:
+  my_site:
+    driver: bridge
