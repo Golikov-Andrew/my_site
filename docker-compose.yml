@@ -31,7 +31,7 @@ services:
       - "8000:8000"
     command: python3 /usr/src/my_site/manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/usr/src/app_tdm
+      - .:/usr/src/my_site
     networks:
       - my_site
 
