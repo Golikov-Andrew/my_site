@@ -1,7 +1,14 @@
 {% extends 'common/base.html' %}
+{% load static %}
+
+{% block local_styles %}
+    <link rel="stylesheet" href="{% static 'common/css/layout.css' %}">
+{% endblock local_styles %}
 
 
 {% block content %}
+
+<div class="content-main-container">
 <p>
     <span>
         Добро пожаловать на мой персональный сайт!
@@ -9,9 +16,18 @@
     <span>
         Здесь я агрегирую свой опыт.
     </span><br>
+    </p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus est est, et fermentum elit semper lacinia. Pellentesque euismod euismod diam, eget porta ante commodo et. Fusce porta, nibh vel consectetur hendrerit, quam augue placerat felis, quis bibendum nunc nunc sed odio. Ut tristique feugiat elit, et aliquet diam accumsan vel. Proin condimentum ante sit amet nulla pellentesque, quis condimentum nibh eleifend. In interdum tempus hendrerit. Donec id varius leo. Aenean at quam risus. Mauris ante nisl, pellentesque et ornare non, commodo id metus. Duis interdum odio justo. Sed dictum pellentesque lectus in euismod.
 
+Phasellus dictum sollicitudin leo, cursus egestas leo sollicitudin eget. Sed nec vehicula nibh. Sed egestas condimentum leo ut feugiat. Nullam in posuere magna. Mauris auctor ultrices lectus. Nam aliquam eu justo non dapibus. In auctor consequat odio, quis mollis mi finibus vel. Suspendisse hendrerit neque ut purus dapibus, sed auctor nisl elementum. Ut et aliquam tellus. Proin eget diam nibh. In ac ligula non augue bibendum mattis. Nunc eros lacus, ultrices vel purus id, eleifend sollicitudin tellus. Nulla sit amet cursus leo.
 
-</p>
+Donec congue vulputate dapibus. Quisque volutpat, magna id euismod suscipit, dolor justo ultrices nunc, vel rhoncus lorem eros id ipsum. Vestibulum non odio justo. Proin malesuada erat eget ante laoreet sagittis in nec ipsum. In et est urna. Nunc aliquet pharetra est, nec cursus urna pulvinar id. Nunc purus nisl, laoreet vel cursus eget, rhoncus eget orci. Vivamus quis felis sodales, sollicitudin lectus vel, molestie eros. Duis at scelerisque diam. Praesent finibus ligula ex, quis mollis lorem ultrices eget. Nullam hendrerit pulvinar ligula, et cursus ex ultrices porta.
+
+Suspendisse congue quam et nisl pellentesque, quis sagittis tortor aliquam. Fusce mattis a nisi non imperdiet. Nullam aliquam commodo tincidunt. Morbi at dui in nunc eleifend fermentum. Curabitur et ornare nibh, consectetur faucibus nunc. Duis consectetur auctor turpis, eget cursus dolor maximus ultricies. Quisque at magna vitae diam luctus efficitur tempus sed dui. Suspendisse tincidunt mauris at tincidunt euismod.
+
+Aliquam interdum leo eu tortor malesuada lacinia. Cras sit amet elit ex. Suspendisse potenti. Nam nec ullamcorper nisi, et bibendum nunc. Morbi eget rutrum neque, eu tempor diam. Donec at ligula elementum dolor porta egestas. Proin a lacus ipsum. Nulla justo lorem, fringilla eget mi vitae, pellentesque semper eros. Donec venenatis dictum velit, in hendrerit ex hendrerit et. Suspendisse ultricies finibus aliquet. Sed ornare est vitae turpis posuere suscipit. Proin porta lectus ac mi viverra feugiat. Suspendisse a massa tempor, laoreet risus nec, varius dolor. Donec vulputate et ex finibus laoreet. In vel risus orci.
+</div>
+
 
 {% endblock content %}
 

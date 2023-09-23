@@ -322,6 +322,9 @@ body > .wrapper {
 #pagination_limit {
   font-size: 12px;
 }
+body {
+  font-family: Arial, Verdana, Tahoma, sans-serif;
+}
 td,
 th {
   padding: 10px;

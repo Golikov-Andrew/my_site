@@ -30,6 +30,22 @@
             <nav class="navbar-container">
                 <a class="{{ title|create_class_of_navbar_link_by_title:'Главная' }}"
                    href="{% url 'homepage' %}">Главная</a>
+            <a class="{{ title|create_class_of_navbar_link_by_title:'Главная' }}"
+                   href="{% url 'homepage' %}">О себе</a>
+            <a class="{{ title|create_class_of_navbar_link_by_title:'Главная' }}"
+                   href="{% url 'homepage' %}">Анкета</a>
+            <a class="{{ title|create_class_of_navbar_link_by_title:'Главная' }}"
+                   href="{% url 'homepage' %}">Блог</a>
+            <a class="{{ title|create_class_of_navbar_link_by_title:'Главная' }}"
+                   href="{% url 'homepage' %}">Опыт</a>
+            <a class="{{ title|create_class_of_navbar_link_by_title:'Главная' }}"
+                   href="{% url 'homepage' %}">Прайс-лист</a>
+            <a class="{{ title|create_class_of_navbar_link_by_title:'Главная' }}"
+                   href="{% url 'homepage' %}">Мои приложения</a>
+            <a class="{{ title|create_class_of_navbar_link_by_title:'Главная' }}"
+                   href="{% url 'homepage' %}">Контакты</a>
+            <a class="{{ title|create_class_of_navbar_link_by_title:'Главная' }}"
+                   href="{% url 'homepage' %}">Задонатить</a>
 
                 {% if user.is_superuser %}
                     <a class="{{ title|create_class_of_navbar_link_by_title:'Админка' }}" href="/admin">Админка</a>
